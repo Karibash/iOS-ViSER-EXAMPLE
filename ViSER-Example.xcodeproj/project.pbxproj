@@ -32,6 +32,8 @@
 		E63980072578970B00248B8D /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63980062578970B00248B8D /* Differentiator.framework */; };
 		E639802C2578D75D00248B8D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E639802B2578D75D00248B8D /* Alamofire.framework */; };
 		E63980332578D9F200248B8D /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63980322578D9F200248B8D /* Kanna.framework */; };
+		E639803A2579193700248B8D /* Alamofire+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63980392579193700248B8D /* Alamofire+Ex.swift */; };
+		E63980462579F9D600248B8D /* DateFormatter+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63980452579F9D600248B8D /* DateFormatter+Ex.swift */; };
 		E639804A257A010D00248B8D /* Date+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6398049257A010D00248B8D /* Date+Ex.swift */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +102,8 @@
 		E63980062578970B00248B8D /* Differentiator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Differentiator.framework; path = Carthage/Build/iOS/Differentiator.framework; sourceTree = "<group>"; };
 		E639802B2578D75D00248B8D /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		E63980322578D9F200248B8D /* Kanna.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kanna.framework; path = Carthage/Build/iOS/Kanna.framework; sourceTree = "<group>"; };
+		E63980392579193700248B8D /* Alamofire+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+Ex.swift"; sourceTree = "<group>"; };
+		E63980452579F9D600248B8D /* DateFormatter+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Ex.swift"; sourceTree = "<group>"; };
 		E6398049257A010D00248B8D /* Date+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ex.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -281,9 +285,11 @@
 		E6397F932577626B00248B8D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E63980392579193700248B8D /* Alamofire+Ex.swift */,
 				E6397F942577627700248B8D /* UIStoryboard+Ex.swift */,
 				E6397F9A2577648000248B8D /* UIViewController+Ex.swift */,
 				E6397F9F2577649900248B8D /* UINavigationController+Ex.swift */,
+				E63980452579F9D600248B8D /* DateFormatter+Ex.swift */,
 				E6398049257A010D00248B8D /* Date+Ex.swift */,
 			);
 			path = Extensions;
@@ -457,6 +463,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E639803A2579193700248B8D /* Alamofire+Ex.swift in Sources */,
 				E6397FE02577850100248B8D /* HomeInterfaces.swift in Sources */,
 				E6397ED825763C9E00248B8D /* HomeViewController.swift in Sources */,
 				E6397F9B2577648000248B8D /* UIViewController+Ex.swift in Sources */,
@@ -469,6 +476,7 @@
 				E6397F44257747A400248B8D /* HomeViewStream.swift in Sources */,
 				E6397F4A257747C900248B8D /* HomeRouter.swift in Sources */,
 				E6397F952577627700248B8D /* UIStoryboard+Ex.swift in Sources */,
+				E63980462579F9D600248B8D /* DateFormatter+Ex.swift in Sources */,
 				E6397FDC257784E500248B8D /* ViewInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
