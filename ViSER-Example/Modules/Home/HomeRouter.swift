@@ -23,7 +23,7 @@ final class HomeRouter: BaseRouter {
             articleRepository: ArticleRepository()
         ))
         let articlePrefetchLogicStream = ArticlePrefetchLogicStream(extra: .init(
-            prefetchRatio: 0.6,
+            prefetchRatio: 0.32,
             prefetchInterval: 2
         ))
         let viewStream = HomeViewStream(extra: .init(

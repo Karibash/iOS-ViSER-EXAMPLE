@@ -36,6 +36,7 @@ extension HomeViewStream {
         // MARK: Input
         let artileTableViewContentOffset = dependency.inputObservables.artileTableViewContentOffset
         let artileTableViewFrameSize = dependency.inputObservables.artileTableViewFrameSize
+        let refreshTrigger = dependency.inputObservables.refreshTrigger
         // MARK: Extra
         let articleFetchLogicStream = dependency.extra.articleFetchLogicStream
         let articlePrefetchLogicStream = dependency.extra.articlePrefetchLogicStream
@@ -46,7 +47,10 @@ extension HomeViewStream {
         artileTableViewFrameSize
             .bind(to: articlePrefetchLogicStream.input.artileTableViewFrameSize)
             .disposed(by: disposeBag)
-        
+
+        refreshTrigger
+            .bind(to: articleFetchLogicStream.input.refreshTrigger)
+            .disposed(by: disposeBag)
         articlePrefetchLogicStream.output.fetchTrigger
             .bind(to: articleFetchLogicStream.input.fetchTrigger)
             .disposed(by: disposeBag)
@@ -55,7 +59,8 @@ extension HomeViewStream {
             .map { [TableViewSection(items: $0)] }
 
         return Output(
-            articleTableViewSections: articleTableViewSections.asDriver(onErrorDriveWith: Driver.empty())
+            articleTableViewSections: articleTableViewSections.asDriver(onErrorDriveWith: Driver.empty()),
+            endRefreshingTrigger: articleFetchLogicStream.output.endRefreshingTrigger.asDriver(onErrorDriveWith: Driver.empty())
         )
     }
 

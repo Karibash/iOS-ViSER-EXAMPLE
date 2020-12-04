@@ -19,13 +19,26 @@ final class HomeViewController: UIViewController {
     // MARK: - Private properties
 
     @IBOutlet private weak var articleTableView: UITableView!
+    private let refreshControl = UIRefreshControl()
     private let disposeBag = DisposeBag()
 
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupRefreshControl()
         setupArticleTableView()
+    }
+
+    private func setupRefreshControl() {
+        articleTableView.refreshControl = refreshControl
+        refreshControl.rx.controlEvent(.valueChanged)
+            .bind(to: viewStream.input.refreshTrigger)
+            .disposed(by: disposeBag)
+
+        viewStream.output.endRefreshingTrigger
+            .subscribe(onNext: { [self] in refreshControl.endRefreshing() })
+            .disposed(by: disposeBag)
     }
 
     private func setupArticleTableView() {

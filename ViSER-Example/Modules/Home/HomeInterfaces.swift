@@ -23,10 +23,12 @@ struct HomeViewDependency {
     struct Input: InputType {
         let artileTableViewContentOffset = PublishRelay<CGPoint>()
         let artileTableViewFrameSize = PublishRelay<CGSize>()
+        let refreshTrigger = PublishRelay<Void>()
     }
 
     struct Output: OutputType {
         let articleTableViewSections: Driver<[TableViewSection<Article>]>
+        let endRefreshingTrigger: Driver<Void>
     }
 
     struct Extra: ExtraType {
@@ -42,10 +44,12 @@ struct ArticleFetchLogicDependency {
 
     struct Input: InputType {
         let fetchTrigger = PublishRelay<Void>()
+        let refreshTrigger = PublishRelay<Void>()
     }
 
     struct Output: OutputType {
         let articles: Observable<[Article]>
+        let endRefreshingTrigger: Observable<Void>
     }
 
     struct State: StateType {

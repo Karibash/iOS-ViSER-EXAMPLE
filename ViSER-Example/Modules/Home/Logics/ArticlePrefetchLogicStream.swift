@@ -40,7 +40,7 @@ extension ArticlePrefetchLogicStream {
         let prefetchInterval = dependency.extra.prefetchInterval
 
         let fetchTrigger = Observable.combineLatest(contentOffset, viewFrameSize)
-            .filter { contentOffset, viewFrameSize in contentOffset.y > (viewFrameSize.height * prefetchRatio) }
+            .filter { $0.y > ($1.height * prefetchRatio) }
             .throttle(DispatchTimeInterval.seconds(prefetchInterval), latest: false, scheduler: ConcurrentMainScheduler.instance)
             .map { _ in }
             .startWith(())

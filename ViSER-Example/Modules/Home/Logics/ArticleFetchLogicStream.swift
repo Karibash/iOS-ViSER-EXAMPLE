@@ -34,6 +34,7 @@ extension ArticleFetchLogicStream {
     static func bind(from dependency: Dependency<Input, State, Extra>, disposeBag: DisposeBag) -> Output {
         // MARK: Input
         let fetchTrigger = dependency.inputObservables.fetchTrigger
+        let refreshTrigger = dependency.inputObservables.refreshTrigger
         // MARK: State
         let articles = dependency.state.articles
         let page = dependency.state.page
@@ -41,19 +42,30 @@ extension ArticleFetchLogicStream {
         let articleRepository = dependency.extra.articleRepository
 
         fetchTrigger
-            .flatMapLatest { articles }
-            .flatMapFirst { articles in
+            .flatMapFirst {
                 articleRepository
                     .paginate(page: page.value)
-                    .map { fetchedArticles in articles + fetchedArticles }
-                    .map { fetchedArticles in fetchedArticles.sorted(by: >) }
+                    .map { articles.value + $0 }
+                    .map { $0.sorted(by: >) }
             }
             .do(onNext: { _ in page.accept(page.value + 1) })
             .bind(to: articles)
             .disposed(by: disposeBag)
 
+        let refreshedArticles = refreshTrigger
+            .do(onNext: { page.accept(1) })
+            .flatMapLatest {
+                articleRepository
+                    .paginate(page: page.value)
+                    .map { $0.sorted(by: >) }
+            }
+        refreshedArticles
+            .bind(to: articles)
+            .disposed(by: disposeBag)
+
         return Output(
-            articles: articles.asObservable()
+            articles: articles.asObservable(),
+            endRefreshingTrigger: refreshedArticles.map { _ in }
         )
     }
 }
