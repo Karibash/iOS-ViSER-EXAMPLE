@@ -49,4 +49,5 @@ extension ArticlePrefetchLogicStream {
             fetchTrigger: fetchTrigger
         )
     }
+
 }
