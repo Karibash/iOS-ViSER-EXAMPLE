@@ -29,7 +29,9 @@
 		E6397FE02577850100248B8D /* HomeInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6397FDF2577850100248B8D /* HomeInterfaces.swift */; };
 		E6397FE525778C9700248B8D /* Unio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6397FA725777A6800248B8D /* Unio.framework */; };
 		E6397FF52577AAE800248B8D /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6397FF42577AAE800248B8D /* RxDataSources.framework */; };
+		E6397FFE25787DD000248B8D /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6397FFD25787DD000248B8D /* Article.swift */; };
 		E63980072578970B00248B8D /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63980062578970B00248B8D /* Differentiator.framework */; };
+		E63980262578CCE400248B8D /* ArticleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63980252578CCE400248B8D /* ArticleRepository.swift */; };
 		E639802C2578D75D00248B8D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E639802B2578D75D00248B8D /* Alamofire.framework */; };
 		E63980332578D9F200248B8D /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63980322578D9F200248B8D /* Kanna.framework */; };
 		E639803A2579193700248B8D /* Alamofire+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63980392579193700248B8D /* Alamofire+Ex.swift */; };
@@ -99,7 +101,9 @@
 		E6397FDB257784E500248B8D /* ViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInterface.swift; sourceTree = "<group>"; };
 		E6397FDF2577850100248B8D /* HomeInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInterfaces.swift; sourceTree = "<group>"; };
 		E6397FF42577AAE800248B8D /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = Carthage/Build/iOS/RxDataSources.framework; sourceTree = "<group>"; };
+		E6397FFD25787DD000248B8D /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		E63980062578970B00248B8D /* Differentiator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Differentiator.framework; path = Carthage/Build/iOS/Differentiator.framework; sourceTree = "<group>"; };
+		E63980252578CCE400248B8D /* ArticleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRepository.swift; sourceTree = "<group>"; };
 		E639802B2578D75D00248B8D /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		E63980322578D9F200248B8D /* Kanna.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kanna.framework; path = Carthage/Build/iOS/Kanna.framework; sourceTree = "<group>"; };
 		E63980392579193700248B8D /* Alamofire+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+Ex.swift"; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 				E6397F3925772FD200248B8D /* Application */,
 				E6397F8B25775F8D00248B8D /* Common */,
 				E6397F3425772B0A00248B8D /* Modules */,
+				E6397FFB25787DA200248B8D /* Infrastructure */,
 				E6397F3625772DC400248B8D /* Resources */,
 				E6397F3525772D8900248B8D /* SupportingFiles */,
 			);
@@ -293,6 +298,31 @@
 				E6398049257A010D00248B8D /* Date+Ex.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E6397FFB25787DA200248B8D /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				E6397FFC25787DBF00248B8D /* Entities */,
+				E63980242578CCB100248B8D /* Repositories */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		E6397FFC25787DBF00248B8D /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				E6397FFD25787DD000248B8D /* Article.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		E63980242578CCB100248B8D /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				E63980252578CCE400248B8D /* ArticleRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -463,6 +493,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6397FFE25787DD000248B8D /* Article.swift in Sources */,
 				E639803A2579193700248B8D /* Alamofire+Ex.swift in Sources */,
 				E6397FE02577850100248B8D /* HomeInterfaces.swift in Sources */,
 				E6397ED825763C9E00248B8D /* HomeViewController.swift in Sources */,
@@ -472,6 +503,7 @@
 				E6397F84257757C400248B8D /* AppNavigationController.swift in Sources */,
 				E6397ED625763C9E00248B8D /* SceneDelegate.swift in Sources */,
 				E6397FA02577649900248B8D /* UINavigationController+Ex.swift in Sources */,
+				E63980262578CCE400248B8D /* ArticleRepository.swift in Sources */,
 				E639804A257A010D00248B8D /* Date+Ex.swift in Sources */,
 				E6397F44257747A400248B8D /* HomeViewStream.swift in Sources */,
 				E6397F4A257747C900248B8D /* HomeRouter.swift in Sources */,
