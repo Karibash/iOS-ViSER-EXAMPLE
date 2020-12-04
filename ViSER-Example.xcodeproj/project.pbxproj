@@ -31,6 +31,8 @@
 		E6397FF52577AAE800248B8D /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6397FF42577AAE800248B8D /* RxDataSources.framework */; };
 		E6397FFE25787DD000248B8D /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6397FFD25787DD000248B8D /* Article.swift */; };
 		E63980072578970B00248B8D /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63980062578970B00248B8D /* Differentiator.framework */; };
+		E639800F2578B3C600248B8D /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E639800E2578B3C600248B8D /* ArticleTableViewCell.swift */; };
+		E63980152578B3D500248B8D /* ArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E63980142578B3D500248B8D /* ArticleTableViewCell.xib */; };
 		E63980262578CCE400248B8D /* ArticleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63980252578CCE400248B8D /* ArticleRepository.swift */; };
 		E639802C2578D75D00248B8D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E639802B2578D75D00248B8D /* Alamofire.framework */; };
 		E63980332578D9F200248B8D /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63980322578D9F200248B8D /* Kanna.framework */; };
@@ -103,6 +105,8 @@
 		E6397FF42577AAE800248B8D /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = Carthage/Build/iOS/RxDataSources.framework; sourceTree = "<group>"; };
 		E6397FFD25787DD000248B8D /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		E63980062578970B00248B8D /* Differentiator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Differentiator.framework; path = Carthage/Build/iOS/Differentiator.framework; sourceTree = "<group>"; };
+		E639800E2578B3C600248B8D /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		E63980142578B3D500248B8D /* ArticleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleTableViewCell.xib; sourceTree = "<group>"; };
 		E63980252578CCE400248B8D /* ArticleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRepository.swift; sourceTree = "<group>"; };
 		E639802B2578D75D00248B8D /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		E63980322578D9F200248B8D /* Kanna.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kanna.framework; path = Carthage/Build/iOS/Kanna.framework; sourceTree = "<group>"; };
@@ -252,6 +256,7 @@
 		E6397F3C25773F6800248B8D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E63980032578885C00248B8D /* Views */,
 				E6397F4D257747D200248B8D /* Logics */,
 				E6397F3D257745D500248B8D /* Home.storyboard */,
 				E6397FDF2577850100248B8D /* HomeInterfaces.swift */,
@@ -315,6 +320,23 @@
 				E6397FFD25787DD000248B8D /* Article.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		E63980032578885C00248B8D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E639800D2578B3B000248B8D /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E639800D2578B3B000248B8D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E639800E2578B3C600248B8D /* ArticleTableViewCell.swift */,
+				E63980142578B3D500248B8D /* ArticleTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		E63980242578CCB100248B8D /* Repositories */ = {
@@ -430,6 +452,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E63980152578B3D500248B8D /* ArticleTableViewCell.xib in Resources */,
 				E6397EE025763C9F00248B8D /* LaunchScreen.storyboard in Resources */,
 				E6397EDD25763C9F00248B8D /* Assets.xcassets in Resources */,
 				E6397F3E257745D500248B8D /* Home.storyboard in Resources */,
@@ -503,6 +526,7 @@
 				E6397F84257757C400248B8D /* AppNavigationController.swift in Sources */,
 				E6397ED625763C9E00248B8D /* SceneDelegate.swift in Sources */,
 				E6397FA02577649900248B8D /* UINavigationController+Ex.swift in Sources */,
+				E639800F2578B3C600248B8D /* ArticleTableViewCell.swift in Sources */,
 				E63980262578CCE400248B8D /* ArticleRepository.swift in Sources */,
 				E639804A257A010D00248B8D /* Date+Ex.swift in Sources */,
 				E6397F44257747A400248B8D /* HomeViewStream.swift in Sources */,
