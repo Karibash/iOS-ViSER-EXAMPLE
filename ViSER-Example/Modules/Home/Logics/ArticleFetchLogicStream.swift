@@ -59,6 +59,7 @@ extension ArticleFetchLogicStream {
                     .paginate(page: page.value)
                     .map { $0.sorted(by: >) }
             }
+            .do(onNext: { _ in page.accept(page.value + 1) })
         refreshedArticles
             .bind(to: articles)
             .disposed(by: disposeBag)
