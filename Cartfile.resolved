@@ -1,2 +1,5 @@
+github "Alamofire/Alamofire" "5.4.0"
 github "ReactiveX/RxSwift" "6.0.0-rc.2"
+github "RxSwiftCommunity/RxDataSources" "4.0.1"
 github "cats-oss/Unio" "0.10.0"
+github "tid-kijyun/Kanna" "5.2.3"
