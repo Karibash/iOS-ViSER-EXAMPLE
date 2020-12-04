@@ -7,7 +7,9 @@
 
 import Unio
 import RxSwift
+import RxCocoa
 import RxRelay
+import RxDataSources
 
 protocol HomeViewStreamType: class {
     var input: InputWrapper<HomeViewDependency.Input> { get }
@@ -31,7 +33,30 @@ extension HomeViewStream {
     typealias Extra = HomeViewDependency.Extra
 
     static func bind(from dependency: Dependency<Input, NoState, Extra>, disposeBag: DisposeBag) -> Output {
-        return Output()
+        // MARK: Input
+        let artileTableViewContentOffset = dependency.inputObservables.artileTableViewContentOffset
+        let artileTableViewFrameSize = dependency.inputObservables.artileTableViewFrameSize
+        // MARK: Extra
+        let articleFetchLogicStream = dependency.extra.articleFetchLogicStream
+        let articlePrefetchLogicStream = dependency.extra.articlePrefetchLogicStream
+
+        artileTableViewContentOffset
+            .bind(to: articlePrefetchLogicStream.input.artileTableViewContentOffset)
+            .disposed(by: disposeBag)
+        artileTableViewFrameSize
+            .bind(to: articlePrefetchLogicStream.input.artileTableViewFrameSize)
+            .disposed(by: disposeBag)
+        
+        articlePrefetchLogicStream.output.fetchTrigger
+            .bind(to: articleFetchLogicStream.input.fetchTrigger)
+            .disposed(by: disposeBag)
+
+        let articleTableViewSections = articleFetchLogicStream.output.articles
+            .map { [TableViewSection(items: $0)] }
+
+        return Output(
+            articleTableViewSections: articleTableViewSections.asDriver(onErrorDriveWith: Driver.empty())
+        )
     }
 
 }

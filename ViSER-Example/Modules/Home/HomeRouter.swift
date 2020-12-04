@@ -9,22 +9,29 @@ import UIKit
 
 final class HomeRouter: BaseRouter {
 
-    // MARK: - Private properties -
+    // MARK: - Private properties
 
     private let _storyboard = UIStoryboard(name: "Home", bundle: nil)
 
-    // MARK: - Module setup -
+    // MARK: - Module setup
 
     init() {
         let viewController = _storyboard.instantiateViewController(ofType: HomeViewController.self)
         super.init(viewController: viewController)
 
-        let viewStream = HomeViewStream(
-            extra: .init(
-                router: self,
-                view: viewController
-            )
-        )
+        let articleFetchLogicStream = ArticleFetchLogicStream(extra: .init(
+            articleRepository: ArticleRepository()
+        ))
+        let articlePrefetchLogicStream = ArticlePrefetchLogicStream(extra: .init(
+            prefetchRatio: 0.6,
+            prefetchInterval: 2
+        ))
+        let viewStream = HomeViewStream(extra: .init(
+            router: self,
+            view: viewController,
+            articleFetchLogicStream: articleFetchLogicStream,
+            articlePrefetchLogicStream: articlePrefetchLogicStream
+        ))
         viewController.viewStream = viewStream
     }
 

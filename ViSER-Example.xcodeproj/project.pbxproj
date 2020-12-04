@@ -28,17 +28,21 @@
 		E6397FDC257784E500248B8D /* ViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6397FDB257784E500248B8D /* ViewInterface.swift */; };
 		E6397FE02577850100248B8D /* HomeInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6397FDF2577850100248B8D /* HomeInterfaces.swift */; };
 		E6397FE525778C9700248B8D /* Unio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6397FA725777A6800248B8D /* Unio.framework */; };
+		E6397FEF2577A00F00248B8D /* TableViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6397FEE2577A00F00248B8D /* TableViewSection.swift */; };
 		E6397FF52577AAE800248B8D /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6397FF42577AAE800248B8D /* RxDataSources.framework */; };
 		E6397FFE25787DD000248B8D /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6397FFD25787DD000248B8D /* Article.swift */; };
 		E63980072578970B00248B8D /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63980062578970B00248B8D /* Differentiator.framework */; };
 		E639800F2578B3C600248B8D /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E639800E2578B3C600248B8D /* ArticleTableViewCell.swift */; };
 		E63980152578B3D500248B8D /* ArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E63980142578B3D500248B8D /* ArticleTableViewCell.xib */; };
+		E63980192578B66000248B8D /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63980182578B66000248B8D /* UIView+Ex.swift */; };
 		E63980262578CCE400248B8D /* ArticleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63980252578CCE400248B8D /* ArticleRepository.swift */; };
 		E639802C2578D75D00248B8D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E639802B2578D75D00248B8D /* Alamofire.framework */; };
 		E63980332578D9F200248B8D /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63980322578D9F200248B8D /* Kanna.framework */; };
 		E639803A2579193700248B8D /* Alamofire+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63980392579193700248B8D /* Alamofire+Ex.swift */; };
 		E63980462579F9D600248B8D /* DateFormatter+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63980452579F9D600248B8D /* DateFormatter+Ex.swift */; };
 		E639804A257A010D00248B8D /* Date+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6398049257A010D00248B8D /* Date+Ex.swift */; };
+		E639804E257A21C700248B8D /* ArticleFetchLogicStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = E639804D257A21C700248B8D /* ArticleFetchLogicStream.swift */; };
+		E6398058257A5B9600248B8D /* ArticlePrefetchLogicStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6398057257A5B9600248B8D /* ArticlePrefetchLogicStream.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,17 +106,21 @@
 		E6397FA725777A6800248B8D /* Unio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Unio.framework; path = Carthage/Build/iOS/Unio.framework; sourceTree = "<group>"; };
 		E6397FDB257784E500248B8D /* ViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInterface.swift; sourceTree = "<group>"; };
 		E6397FDF2577850100248B8D /* HomeInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInterfaces.swift; sourceTree = "<group>"; };
+		E6397FEE2577A00F00248B8D /* TableViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSection.swift; sourceTree = "<group>"; };
 		E6397FF42577AAE800248B8D /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = Carthage/Build/iOS/RxDataSources.framework; sourceTree = "<group>"; };
 		E6397FFD25787DD000248B8D /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		E63980062578970B00248B8D /* Differentiator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Differentiator.framework; path = Carthage/Build/iOS/Differentiator.framework; sourceTree = "<group>"; };
 		E639800E2578B3C600248B8D /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		E63980142578B3D500248B8D /* ArticleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleTableViewCell.xib; sourceTree = "<group>"; };
+		E63980182578B66000248B8D /* UIView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
 		E63980252578CCE400248B8D /* ArticleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRepository.swift; sourceTree = "<group>"; };
 		E639802B2578D75D00248B8D /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		E63980322578D9F200248B8D /* Kanna.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kanna.framework; path = Carthage/Build/iOS/Kanna.framework; sourceTree = "<group>"; };
 		E63980392579193700248B8D /* Alamofire+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+Ex.swift"; sourceTree = "<group>"; };
 		E63980452579F9D600248B8D /* DateFormatter+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Ex.swift"; sourceTree = "<group>"; };
 		E6398049257A010D00248B8D /* Date+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ex.swift"; sourceTree = "<group>"; };
+		E639804D257A21C700248B8D /* ArticleFetchLogicStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleFetchLogicStream.swift; sourceTree = "<group>"; };
+		E6398057257A5B9600248B8D /* ArticlePrefetchLogicStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlePrefetchLogicStream.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,6 +278,8 @@
 		E6397F4D257747D200248B8D /* Logics */ = {
 			isa = PBXGroup;
 			children = (
+				E639804D257A21C700248B8D /* ArticleFetchLogicStream.swift */,
+				E6398057257A5B9600248B8D /* ArticlePrefetchLogicStream.swift */,
 			);
 			path = Logics;
 			sourceTree = "<group>";
@@ -277,6 +287,7 @@
 		E6397F8B25775F8D00248B8D /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E6397FED25779FC300248B8D /* Entities */,
 				E6397F932577626B00248B8D /* Extensions */,
 				E6397F8C25775F9500248B8D /* ViSER */,
 			);
@@ -299,10 +310,19 @@
 				E6397F942577627700248B8D /* UIStoryboard+Ex.swift */,
 				E6397F9A2577648000248B8D /* UIViewController+Ex.swift */,
 				E6397F9F2577649900248B8D /* UINavigationController+Ex.swift */,
+				E63980182578B66000248B8D /* UIView+Ex.swift */,
 				E63980452579F9D600248B8D /* DateFormatter+Ex.swift */,
 				E6398049257A010D00248B8D /* Date+Ex.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E6397FED25779FC300248B8D /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				E6397FEE2577A00F00248B8D /* TableViewSection.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		E6397FFB25787DA200248B8D /* Infrastructure */ = {
@@ -520,6 +540,7 @@
 				E639803A2579193700248B8D /* Alamofire+Ex.swift in Sources */,
 				E6397FE02577850100248B8D /* HomeInterfaces.swift in Sources */,
 				E6397ED825763C9E00248B8D /* HomeViewController.swift in Sources */,
+				E6397FEF2577A00F00248B8D /* TableViewSection.swift in Sources */,
 				E6397F9B2577648000248B8D /* UIViewController+Ex.swift in Sources */,
 				E6397ED425763C9E00248B8D /* AppDelegate.swift in Sources */,
 				E6397F8E25775FA000248B8D /* BaseRouter.swift in Sources */,
@@ -527,12 +548,15 @@
 				E6397ED625763C9E00248B8D /* SceneDelegate.swift in Sources */,
 				E6397FA02577649900248B8D /* UINavigationController+Ex.swift in Sources */,
 				E639800F2578B3C600248B8D /* ArticleTableViewCell.swift in Sources */,
+				E63980192578B66000248B8D /* UIView+Ex.swift in Sources */,
 				E63980262578CCE400248B8D /* ArticleRepository.swift in Sources */,
 				E639804A257A010D00248B8D /* Date+Ex.swift in Sources */,
 				E6397F44257747A400248B8D /* HomeViewStream.swift in Sources */,
 				E6397F4A257747C900248B8D /* HomeRouter.swift in Sources */,
 				E6397F952577627700248B8D /* UIStoryboard+Ex.swift in Sources */,
+				E6398058257A5B9600248B8D /* ArticlePrefetchLogicStream.swift in Sources */,
 				E63980462579F9D600248B8D /* DateFormatter+Ex.swift in Sources */,
+				E639804E257A21C700248B8D /* ArticleFetchLogicStream.swift in Sources */,
 				E6397FDC257784E500248B8D /* ViewInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

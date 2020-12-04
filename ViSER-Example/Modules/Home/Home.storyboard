@@ -31,6 +31,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Zenn" id="Tvu-03-hYK"/>
+                    <connections>
+                        <outlet property="articleTableView" destination="VfD-WL-Dyj" id="bzK-pQ-eC4"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="-35" y="-63"/>

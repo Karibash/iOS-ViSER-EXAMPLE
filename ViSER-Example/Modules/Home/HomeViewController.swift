@@ -6,18 +6,51 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import RxDataSources
 
 final class HomeViewController: UIViewController {
 
-    // MARK: - Public properties -
+    // MARK: - Public properties
 
     var viewStream: HomeViewStreamType!
 
-    // MARK: - Lifecycle -
+    // MARK: - Private properties
+
+    @IBOutlet private weak var articleTableView: UITableView!
+    private let disposeBag = DisposeBag()
+
+    // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        setupArticleTableView()
+    }
+
+    private func setupArticleTableView() {
+        let cellIdentifier = String(describing: ArticleTableViewCell.self)
+        articleTableView.register(UINib(nibName: cellIdentifier, bundle: nil), forCellReuseIdentifier: cellIdentifier)
+
+        articleTableView.rx.contentOffset
+            .bind(to: viewStream.input.artileTableViewContentOffset)
+            .disposed(by: disposeBag)
+        articleTableView.rx.contentOffset
+            .map { [self] _ in articleTableView.contentSize }
+            .distinctUntilChanged()
+            .bind(to: viewStream.input.artileTableViewFrameSize)
+            .disposed(by: disposeBag)
+
+        let dataSource = RxTableViewSectionedReloadDataSource<TableViewSection<Article>>(
+            configureCell: { dataSource, tableView, indexPath, item in
+                let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ArticleTableViewCell
+                cell.configure(item)
+                return cell
+            }
+        )
+        viewStream.output.articleTableViewSections
+            .bind(to: articleTableView.rx.items(dataSource: dataSource))
+            .disposed(by: disposeBag)
     }
 
 }
