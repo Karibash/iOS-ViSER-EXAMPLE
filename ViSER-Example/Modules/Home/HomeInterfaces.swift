@@ -21,8 +21,8 @@ protocol HomeViewInterface: ViewInterface {
 struct HomeViewDependency {
 
     struct Input: InputType {
-        let artileTableViewContentOffset = PublishRelay<CGPoint>()
-        let artileTableViewFrameSize = PublishRelay<CGSize>()
+        let articleTableViewContentOffset = PublishRelay<CGPoint>()
+        let articleTableViewFrameSize = PublishRelay<CGSize>()
         let refreshTrigger = PublishRelay<Void>()
     }
 
@@ -66,8 +66,8 @@ struct ArticleFetchLogicDependency {
 struct ArticlePrefetchLogicDependency {
 
     struct Input: InputType {
-        let artileTableViewContentOffset = PublishRelay<CGPoint>()
-        let artileTableViewFrameSize = PublishRelay<CGSize>()
+        let articleTableViewContentOffset = PublishRelay<CGPoint>()
+        let articleTableViewFrameSize = PublishRelay<CGSize>()
     }
 
     struct Output: OutputType {

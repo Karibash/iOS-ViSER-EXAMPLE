@@ -46,12 +46,12 @@ final class HomeViewController: UIViewController {
         articleTableView.register(UINib(nibName: cellIdentifier, bundle: nil), forCellReuseIdentifier: cellIdentifier)
 
         articleTableView.rx.contentOffset
-            .bind(to: viewStream.input.artileTableViewContentOffset)
+            .bind(to: viewStream.input.articleTableViewContentOffset)
             .disposed(by: disposeBag)
         articleTableView.rx.contentOffset
             .map { [self] _ in articleTableView.contentSize }
             .distinctUntilChanged()
-            .bind(to: viewStream.input.artileTableViewFrameSize)
+            .bind(to: viewStream.input.articleTableViewFrameSize)
             .disposed(by: disposeBag)
 
         let dataSource = RxTableViewSectionedReloadDataSource<TableViewSection<Article>>(

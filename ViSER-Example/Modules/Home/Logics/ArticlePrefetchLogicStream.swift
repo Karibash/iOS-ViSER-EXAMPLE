@@ -33,8 +33,8 @@ extension ArticlePrefetchLogicStream {
 
     static func bind(from dependency: Dependency<Input, State, Extra>, disposeBag: DisposeBag) -> Output {
         // MARK: Input
-        let contentOffset = dependency.inputObservables.artileTableViewContentOffset
-        let viewFrameSize = dependency.inputObservables.artileTableViewFrameSize
+        let contentOffset = dependency.inputObservables.articleTableViewContentOffset
+        let viewFrameSize = dependency.inputObservables.articleTableViewFrameSize
         // MARK: Extra
         let prefetchRatio = dependency.extra.prefetchRatio
         let prefetchInterval = dependency.extra.prefetchInterval

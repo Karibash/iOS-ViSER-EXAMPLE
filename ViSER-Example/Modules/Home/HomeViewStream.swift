@@ -34,18 +34,18 @@ extension HomeViewStream {
 
     static func bind(from dependency: Dependency<Input, NoState, Extra>, disposeBag: DisposeBag) -> Output {
         // MARK: Input
-        let artileTableViewContentOffset = dependency.inputObservables.artileTableViewContentOffset
-        let artileTableViewFrameSize = dependency.inputObservables.artileTableViewFrameSize
+        let articleTableViewContentOffset = dependency.inputObservables.articleTableViewContentOffset
+        let articleTableViewFrameSize = dependency.inputObservables.articleTableViewFrameSize
         let refreshTrigger = dependency.inputObservables.refreshTrigger
         // MARK: Extra
         let articleFetchLogicStream = dependency.extra.articleFetchLogicStream
         let articlePrefetchLogicStream = dependency.extra.articlePrefetchLogicStream
 
-        artileTableViewContentOffset
-            .bind(to: articlePrefetchLogicStream.input.artileTableViewContentOffset)
+        articleTableViewContentOffset
+            .bind(to: articlePrefetchLogicStream.input.articleTableViewContentOffset)
             .disposed(by: disposeBag)
-        artileTableViewFrameSize
-            .bind(to: articlePrefetchLogicStream.input.artileTableViewFrameSize)
+        articleTableViewFrameSize
+            .bind(to: articlePrefetchLogicStream.input.articleTableViewFrameSize)
             .disposed(by: disposeBag)
 
         refreshTrigger
