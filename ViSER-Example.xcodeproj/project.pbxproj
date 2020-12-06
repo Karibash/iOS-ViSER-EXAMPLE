@@ -48,6 +48,7 @@
 		E6398065257CCACB00248B8D /* ArticleDetailInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6398064257CCACB00248B8D /* ArticleDetailInterfaces.swift */; };
 		E639806B257CCC2D00248B8D /* ArticleDetailViewStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = E639806A257CCC2D00248B8D /* ArticleDetailViewStream.swift */; };
 		E639806F257CCEC800248B8D /* ArticleDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E639806E257CCEC800248B8D /* ArticleDetailRouter.swift */; };
+		E6398073257D0A3800248B8D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6398072257D0A3800248B8D /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +132,7 @@
 		E6398064257CCACB00248B8D /* ArticleDetailInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailInterfaces.swift; sourceTree = "<group>"; };
 		E639806A257CCC2D00248B8D /* ArticleDetailViewStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewStream.swift; sourceTree = "<group>"; };
 		E639806E257CCEC800248B8D /* ArticleDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailRouter.swift; sourceTree = "<group>"; };
+		E6398072257D0A3800248B8D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -349,6 +351,7 @@
 			isa = PBXGroup;
 			children = (
 				E6397FFD25787DD000248B8D /* Article.swift */,
+				E6398072257D0A3800248B8D /* User.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -565,6 +568,7 @@
 				E6397FE02577850100248B8D /* HomeInterfaces.swift in Sources */,
 				E6397ED825763C9E00248B8D /* HomeViewController.swift in Sources */,
 				E6397FEF2577A00F00248B8D /* TableViewSection.swift in Sources */,
+				E6398073257D0A3800248B8D /* User.swift in Sources */,
 				E6398061257CCA6400248B8D /* ArticleDetailViewController.swift in Sources */,
 				E6397F9B2577648000248B8D /* UIViewController+Ex.swift in Sources */,
 				E6397ED425763C9E00248B8D /* AppDelegate.swift in Sources */,

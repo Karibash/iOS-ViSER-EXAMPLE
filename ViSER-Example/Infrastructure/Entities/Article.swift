@@ -14,6 +14,7 @@ struct Article: Decodable {
     let emoji: String
     let readingTimeMinutes: Int
     let publishedAt: Date
+    let user: User
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -22,6 +23,7 @@ struct Article: Decodable {
         case emoji
         case readingTimeMinutes = "reading_time"
         case publishedAt = "published_at"
+        case user
     }
 }
 
