@@ -34,9 +34,11 @@ extension ArticleDetailViewStream {
         // MARK: Extra
         let article = dependency.extra.article
 
+        let url = URL(string: "https://zenn.dev/\(article.user.username)/articles/\(article.slug)")
+
         return Output(
             title: Driver.of(article.title),
-            url: Driver.of(URLRequest(url: URL(string: "https://www.google.com")!))
+            url: Driver.of(URLRequest(url: url!))
         )
     }
 
