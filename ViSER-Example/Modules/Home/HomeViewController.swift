@@ -54,6 +54,10 @@ final class HomeViewController: UIViewController {
             .bind(to: viewStream.input.articleTableViewFrameSize)
             .disposed(by: disposeBag)
 
+        articleTableView.rx.modelSelected(Article.self)
+            .bind(to: viewStream.input.articleSelected)
+            .disposed(by: disposeBag)
+
         let dataSource = RxTableViewSectionedReloadDataSource<TableViewSection<Article>>(
             configureCell: { dataSource, tableView, indexPath, item in
                 let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ArticleTableViewCell

@@ -39,4 +39,15 @@ final class HomeRouter: BaseRouter {
 
 extension HomeRouter: HomeRouterInterface {
 
+    func navigate(to option: HomeNavigationOption) {
+        switch option {
+        case .detail(let article):
+            _openDetail(with: article)
+        }
+    }
+
+    private func _openDetail(with article: Article) {
+        navigationController?.pushRouter(ArticleDetailRouter(article: article))
+    }
+
 }

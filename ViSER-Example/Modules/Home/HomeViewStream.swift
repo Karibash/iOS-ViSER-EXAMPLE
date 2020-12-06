@@ -36,8 +36,10 @@ extension HomeViewStream {
         // MARK: Input
         let articleTableViewContentOffset = dependency.inputObservables.articleTableViewContentOffset
         let articleTableViewFrameSize = dependency.inputObservables.articleTableViewFrameSize
+        let articleSelected = dependency.inputObservables.articleSelected
         let refreshTrigger = dependency.inputObservables.refreshTrigger
         // MARK: Extra
+        let router = dependency.extra.router
         let articleFetchLogicStream = dependency.extra.articleFetchLogicStream
         let articlePrefetchLogicStream = dependency.extra.articlePrefetchLogicStream
 
@@ -57,6 +59,10 @@ extension HomeViewStream {
 
         let articleTableViewSections = articleFetchLogicStream.output.articles
             .map { [TableViewSection(items: $0)] }
+
+        articleSelected
+            .subscribe(onNext: { router.navigate(to: .detail($0)) })
+            .disposed(by: disposeBag)
 
         return Output(
             articleTableViewSections: articleTableViewSections.asDriver(onErrorDriveWith: Driver.empty()),

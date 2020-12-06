@@ -10,8 +10,12 @@ import RxSwift
 import RxCocoa
 import RxDataSources
 
-protocol HomeRouterInterface: RouterInterface {
+enum HomeNavigationOption {
+    case detail(Article)
+}
 
+protocol HomeRouterInterface: RouterInterface {
+    func navigate(to option: HomeNavigationOption)
 }
 
 protocol HomeViewInterface: ViewInterface {
@@ -23,6 +27,7 @@ struct HomeViewDependency {
     struct Input: InputType {
         let articleTableViewContentOffset = PublishRelay<CGPoint>()
         let articleTableViewFrameSize = PublishRelay<CGSize>()
+        let articleSelected = PublishRelay<Article>()
         let refreshTrigger = PublishRelay<Void>()
     }
 
