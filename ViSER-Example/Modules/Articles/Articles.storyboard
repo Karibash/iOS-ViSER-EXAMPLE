@@ -7,11 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--Articles View Controller-->
         <scene sceneID="P4m-AD-J0Q">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5In-ZH-ID2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="HomeViewController" id="rIk-V7-CRw" userLabel="Home View Controller" customClass="HomeViewController" customModule="ViSER_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ArticlesViewController" id="rIk-V7-CRw" userLabel="Articles View Controller" customClass="ArticlesViewController" customModule="ViSER_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qLA-i2-cND">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,6 +34,7 @@
                         <outlet property="articleTableView" destination="VfD-WL-Dyj" id="bzK-pQ-eC4"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5In-ZH-ID2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-35" y="-63"/>
         </scene>

@@ -1,5 +1,5 @@
 //
-//  HomeInterfaces.swift
+//  ArticlesInterfaces.swift
 //  ViSER-Example
 //
 //  Created by Karibash on 2020/12/02.
@@ -10,19 +10,19 @@ import RxSwift
 import RxCocoa
 import RxDataSources
 
-enum HomeNavigationOption {
+enum ArticlesNavigationOption {
     case detail(Article)
 }
 
-protocol HomeRouterInterface: RouterInterface {
-    func navigate(to option: HomeNavigationOption)
+protocol ArticlesRouterInterface: RouterInterface {
+    func navigate(to option: ArticlesNavigationOption)
 }
 
-protocol HomeViewInterface: ViewInterface {
+protocol ArticlesViewInterface: ViewInterface {
 
 }
 
-struct HomeViewDependency {
+struct ArticlesViewDependency {
 
     struct Input: InputType {
         let articleTableViewContentOffset = PublishRelay<CGPoint>()
@@ -37,17 +37,17 @@ struct HomeViewDependency {
     }
 
     struct Extra: ExtraType {
-        let router: HomeRouterInterface
-        let view: HomeViewInterface
+        let router: ArticlesRouterInterface
+        let view: ArticlesViewInterface
         let articleFetchLogicStream: ArticleFetchLogicStreamType
         let articlePrefetchLogicStream: ArticlePrefetchLogicStreamType
     }
 
 }
 
-protocol HomeViewStreamType {
-    var input: InputWrapper<HomeViewDependency.Input> { get }
-    var output: OutputWrapper<HomeViewDependency.Output> { get }
+protocol ArticlesViewStreamType {
+    var input: InputWrapper<ArticlesViewDependency.Input> { get }
+    var output: OutputWrapper<ArticlesViewDependency.Output> { get }
 }
 
 struct ArticleFetchLogicDependency {

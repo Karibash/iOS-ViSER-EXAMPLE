@@ -1,5 +1,5 @@
 //
-//  HomeViewStream.swift
+//  ArticlesViewStream.swift
 //  ViSER
 //
 //  Created by Karibash on 2020/12/02.
@@ -11,7 +11,7 @@ import RxCocoa
 import RxRelay
 import RxDataSources
 
-final class HomeViewStream: UnioStream<HomeViewStream>, HomeViewStreamType {
+final class ArticlesViewStream: UnioStream<ArticlesViewStream>, ArticlesViewStreamType {
 
     convenience init(extra: Extra) {
         self.init(input: Input(),
@@ -21,11 +21,11 @@ final class HomeViewStream: UnioStream<HomeViewStream>, HomeViewStreamType {
 
 }
 
-extension HomeViewStream {
+extension ArticlesViewStream {
 
-    typealias Input = HomeViewDependency.Input
-    typealias Output = HomeViewDependency.Output
-    typealias Extra = HomeViewDependency.Extra
+    typealias Input = ArticlesViewDependency.Input
+    typealias Output = ArticlesViewDependency.Output
+    typealias Extra = ArticlesViewDependency.Extra
 
     static func bind(from dependency: Dependency<Input, NoState, Extra>, disposeBag: DisposeBag) -> Output {
         // MARK: Input

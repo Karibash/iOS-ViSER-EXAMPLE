@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  ArticlesViewController.swift
 //  ViSER
 //
 //  Created by Karibash on 2020/12/01.
@@ -10,11 +10,11 @@ import RxSwift
 import RxCocoa
 import RxDataSources
 
-final class HomeViewController: UIViewController {
+final class ArticlesViewController: UIViewController {
 
     // MARK: - Public properties
 
-    var viewStream: HomeViewStreamType!
+    var viewStream: ArticlesViewStreamType!
 
     // MARK: - Private properties
 
@@ -72,6 +72,6 @@ final class HomeViewController: UIViewController {
 
 }
 
-extension HomeViewController: HomeViewInterface {
+extension ArticlesViewController: ArticlesViewInterface {
 
 }

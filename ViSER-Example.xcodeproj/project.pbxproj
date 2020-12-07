@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		E6397ED425763C9E00248B8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6397ED325763C9E00248B8D /* AppDelegate.swift */; };
 		E6397ED625763C9E00248B8D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6397ED525763C9E00248B8D /* SceneDelegate.swift */; };
-		E6397ED825763C9E00248B8D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6397ED725763C9E00248B8D /* HomeViewController.swift */; };
+		E6397ED825763C9E00248B8D /* ArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6397ED725763C9E00248B8D /* ArticlesViewController.swift */; };
 		E6397EDD25763C9F00248B8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6397EDC25763C9F00248B8D /* Assets.xcassets */; };
 		E6397EE025763C9F00248B8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6397EDE25763C9F00248B8D /* LaunchScreen.storyboard */; };
 		E6397EEB25763C9F00248B8D /* ViSERTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6397EEA25763C9F00248B8D /* ViSERTests.swift */; };
@@ -17,16 +17,16 @@
 		E6397F0B2576565D00248B8D /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6397F0A2576565D00248B8D /* RxRelay.framework */; };
 		E6397F142576566500248B8D /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6397F132576566500248B8D /* RxCocoa.framework */; };
 		E6397F192576566C00248B8D /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6397F182576566C00248B8D /* RxSwift.framework */; };
-		E6397F3E257745D500248B8D /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6397F3D257745D500248B8D /* Home.storyboard */; };
-		E6397F44257747A400248B8D /* HomeViewStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6397F43257747A400248B8D /* HomeViewStream.swift */; };
-		E6397F4A257747C900248B8D /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6397F49257747C900248B8D /* HomeRouter.swift */; };
+		E6397F3E257745D500248B8D /* Articles.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6397F3D257745D500248B8D /* Articles.storyboard */; };
+		E6397F44257747A400248B8D /* ArticlesViewStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6397F43257747A400248B8D /* ArticlesViewStream.swift */; };
+		E6397F4A257747C900248B8D /* ArticlesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6397F49257747C900248B8D /* ArticlesRouter.swift */; };
 		E6397F84257757C400248B8D /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6397F83257757C400248B8D /* AppNavigationController.swift */; };
 		E6397F8E25775FA000248B8D /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6397F8D25775FA000248B8D /* BaseRouter.swift */; };
 		E6397F952577627700248B8D /* UIStoryboard+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6397F942577627700248B8D /* UIStoryboard+Ex.swift */; };
 		E6397F9B2577648000248B8D /* UIViewController+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6397F9A2577648000248B8D /* UIViewController+Ex.swift */; };
 		E6397FA02577649900248B8D /* UINavigationController+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6397F9F2577649900248B8D /* UINavigationController+Ex.swift */; };
 		E6397FDC257784E500248B8D /* ViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6397FDB257784E500248B8D /* ViewInterface.swift */; };
-		E6397FE02577850100248B8D /* HomeInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6397FDF2577850100248B8D /* HomeInterfaces.swift */; };
+		E6397FE02577850100248B8D /* ArticlesInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6397FDF2577850100248B8D /* ArticlesInterfaces.swift */; };
 		E6397FE525778C9700248B8D /* Unio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6397FA725777A6800248B8D /* Unio.framework */; };
 		E6397FEF2577A00F00248B8D /* TableViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6397FEE2577A00F00248B8D /* TableViewSection.swift */; };
 		E6397FF52577AAE800248B8D /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6397FF42577AAE800248B8D /* RxDataSources.framework */; };
@@ -85,7 +85,7 @@
 		E6397ED025763C9E00248B8D /* ViSER-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ViSER-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6397ED325763C9E00248B8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6397ED525763C9E00248B8D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E6397ED725763C9E00248B8D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E6397ED725763C9E00248B8D /* ArticlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewController.swift; sourceTree = "<group>"; };
 		E6397EDC25763C9F00248B8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6397EDF25763C9F00248B8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E6397EE125763C9F00248B8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -101,9 +101,9 @@
 		E6397F182576566C00248B8D /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		E6397F1D2576568500248B8D /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
 		E6397F202576568700248B8D /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
-		E6397F3D257745D500248B8D /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		E6397F43257747A400248B8D /* HomeViewStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewStream.swift; sourceTree = "<group>"; };
-		E6397F49257747C900248B8D /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		E6397F3D257745D500248B8D /* Articles.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Articles.storyboard; sourceTree = "<group>"; };
+		E6397F43257747A400248B8D /* ArticlesViewStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewStream.swift; sourceTree = "<group>"; };
+		E6397F49257747C900248B8D /* ArticlesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesRouter.swift; sourceTree = "<group>"; };
 		E6397F83257757C400248B8D /* AppNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationController.swift; sourceTree = "<group>"; };
 		E6397F8D25775FA000248B8D /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		E6397F942577627700248B8D /* UIStoryboard+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Ex.swift"; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 		E6397F9F2577649900248B8D /* UINavigationController+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Ex.swift"; sourceTree = "<group>"; };
 		E6397FA725777A6800248B8D /* Unio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Unio.framework; path = Carthage/Build/iOS/Unio.framework; sourceTree = "<group>"; };
 		E6397FDB257784E500248B8D /* ViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInterface.swift; sourceTree = "<group>"; };
-		E6397FDF2577850100248B8D /* HomeInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInterfaces.swift; sourceTree = "<group>"; };
+		E6397FDF2577850100248B8D /* ArticlesInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesInterfaces.swift; sourceTree = "<group>"; };
 		E6397FEE2577A00F00248B8D /* TableViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSection.swift; sourceTree = "<group>"; };
 		E6397FF42577AAE800248B8D /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = Carthage/Build/iOS/RxDataSources.framework; sourceTree = "<group>"; };
 		E6397FFD25787DD000248B8D /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
@@ -241,7 +241,7 @@
 		E6397F3425772B0A00248B8D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				E6397F3C25773F6800248B8D /* Home */,
+				E6397F3C25773F6800248B8D /* Articles */,
 				E639805B257CC93400248B8D /* ArticleDetail */,
 			);
 			path = Modules;
@@ -274,18 +274,18 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
-		E6397F3C25773F6800248B8D /* Home */ = {
+		E6397F3C25773F6800248B8D /* Articles */ = {
 			isa = PBXGroup;
 			children = (
 				E63980032578885C00248B8D /* Views */,
 				E6397F4D257747D200248B8D /* Logics */,
-				E6397F3D257745D500248B8D /* Home.storyboard */,
-				E6397FDF2577850100248B8D /* HomeInterfaces.swift */,
-				E6397ED725763C9E00248B8D /* HomeViewController.swift */,
-				E6397F43257747A400248B8D /* HomeViewStream.swift */,
-				E6397F49257747C900248B8D /* HomeRouter.swift */,
+				E6397F3D257745D500248B8D /* Articles.storyboard */,
+				E6397FDF2577850100248B8D /* ArticlesInterfaces.swift */,
+				E6397ED725763C9E00248B8D /* ArticlesViewController.swift */,
+				E6397F43257747A400248B8D /* ArticlesViewStream.swift */,
+				E6397F49257747C900248B8D /* ArticlesRouter.swift */,
 			);
-			path = Home;
+			path = Articles;
 			sourceTree = "<group>";
 		};
 		E6397F4D257747D200248B8D /* Logics */ = {
@@ -502,7 +502,7 @@
 				E6397EE025763C9F00248B8D /* LaunchScreen.storyboard in Resources */,
 				E639805D257CCA2600248B8D /* ArticleDetail.storyboard in Resources */,
 				E6397EDD25763C9F00248B8D /* Assets.xcassets in Resources */,
-				E6397F3E257745D500248B8D /* Home.storyboard in Resources */,
+				E6397F3E257745D500248B8D /* Articles.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,8 +565,8 @@
 			files = (
 				E6397FFE25787DD000248B8D /* Article.swift in Sources */,
 				E639803A2579193700248B8D /* Alamofire+Ex.swift in Sources */,
-				E6397FE02577850100248B8D /* HomeInterfaces.swift in Sources */,
-				E6397ED825763C9E00248B8D /* HomeViewController.swift in Sources */,
+				E6397FE02577850100248B8D /* ArticlesInterfaces.swift in Sources */,
+				E6397ED825763C9E00248B8D /* ArticlesViewController.swift in Sources */,
 				E6397FEF2577A00F00248B8D /* TableViewSection.swift in Sources */,
 				E6398073257D0A3800248B8D /* User.swift in Sources */,
 				E6398061257CCA6400248B8D /* ArticleDetailViewController.swift in Sources */,
@@ -582,8 +582,8 @@
 				E63980192578B66000248B8D /* UIView+Ex.swift in Sources */,
 				E63980262578CCE400248B8D /* ArticleRepository.swift in Sources */,
 				E639804A257A010D00248B8D /* Date+Ex.swift in Sources */,
-				E6397F44257747A400248B8D /* HomeViewStream.swift in Sources */,
-				E6397F4A257747C900248B8D /* HomeRouter.swift in Sources */,
+				E6397F44257747A400248B8D /* ArticlesViewStream.swift in Sources */,
+				E6397F4A257747C900248B8D /* ArticlesRouter.swift in Sources */,
 				E6397F952577627700248B8D /* UIStoryboard+Ex.swift in Sources */,
 				E6398058257A5B9600248B8D /* ArticlePrefetchLogicStream.swift in Sources */,
 				E639806B257CCC2D00248B8D /* ArticleDetailViewStream.swift in Sources */,

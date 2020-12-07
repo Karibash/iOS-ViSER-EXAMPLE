@@ -1,5 +1,5 @@
 //
-//  HomeRouter.swift
+//  ArticlesRouter.swift
 //  ViSER
 //
 //  Created by Karibash on 2020/12/02.
@@ -7,16 +7,16 @@
 
 import UIKit
 
-final class HomeRouter: BaseRouter {
+final class ArticlesRouter: BaseRouter {
 
     // MARK: - Private properties
 
-    private let _storyboard = UIStoryboard(name: "Home", bundle: nil)
+    private let _storyboard = UIStoryboard(name: "Articles", bundle: nil)
 
     // MARK: - Module setup
 
     init() {
-        let viewController = _storyboard.instantiateViewController(ofType: HomeViewController.self)
+        let viewController = _storyboard.instantiateViewController(ofType: ArticlesViewController.self)
         super.init(viewController: viewController)
 
         let articleFetchLogicStream = ArticleFetchLogicStream(extra: .init(
@@ -26,7 +26,7 @@ final class HomeRouter: BaseRouter {
             prefetchRatio: 0.32,
             prefetchInterval: 2
         ))
-        let viewStream = HomeViewStream(extra: .init(
+        let viewStream = ArticlesViewStream(extra: .init(
             router: self,
             view: viewController,
             articleFetchLogicStream: articleFetchLogicStream,
@@ -37,9 +37,9 @@ final class HomeRouter: BaseRouter {
 
 }
 
-extension HomeRouter: HomeRouterInterface {
+extension ArticlesRouter: ArticlesRouterInterface {
 
-    func navigate(to option: HomeNavigationOption) {
+    func navigate(to option: ArticlesNavigationOption) {
         switch option {
         case .detail(let article):
             _openDetail(with: article)
