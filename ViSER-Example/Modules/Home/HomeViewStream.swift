@@ -11,11 +11,6 @@ import RxCocoa
 import RxRelay
 import RxDataSources
 
-protocol HomeViewStreamType: class {
-    var input: InputWrapper<HomeViewDependency.Input> { get }
-    var output: OutputWrapper<HomeViewDependency.Output> { get }
-}
-
 final class HomeViewStream: UnioStream<HomeViewStream>, HomeViewStreamType {
 
     convenience init(extra: Extra) {

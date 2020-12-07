@@ -45,6 +45,11 @@ struct HomeViewDependency {
 
 }
 
+protocol HomeViewStreamType {
+    var input: InputWrapper<HomeViewDependency.Input> { get }
+    var output: OutputWrapper<HomeViewDependency.Output> { get }
+}
+
 struct ArticleFetchLogicDependency {
 
     struct Input: InputType {
@@ -68,6 +73,11 @@ struct ArticleFetchLogicDependency {
 
 }
 
+protocol ArticleFetchLogicStreamType: AnyObject {
+    var input: InputWrapper<ArticleFetchLogicDependency.Input> { get }
+    var output: OutputWrapper<ArticleFetchLogicDependency.Output> { get }
+}
+
 struct ArticlePrefetchLogicDependency {
 
     struct Input: InputType {
@@ -88,4 +98,9 @@ struct ArticlePrefetchLogicDependency {
         let prefetchInterval: Int
     }
 
+}
+
+protocol ArticlePrefetchLogicStreamType: AnyObject {
+    var input: InputWrapper<ArticlePrefetchLogicDependency.Input> { get }
+    var output: OutputWrapper<ArticlePrefetchLogicDependency.Output> { get }
 }

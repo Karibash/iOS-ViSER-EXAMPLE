@@ -9,11 +9,6 @@ import RxCocoa
 import RxSwift
 import Unio
 
-protocol ArticleFetchLogicStreamType: AnyObject {
-    var input: InputWrapper<ArticleFetchLogicDependency.Input> { get }
-    var output: OutputWrapper<ArticleFetchLogicDependency.Output> { get }
-}
-
 final class ArticleFetchLogicStream: UnioStream<ArticleFetchLogicStream>, ArticleFetchLogicStreamType {
 
     convenience init(extra: Extra) {

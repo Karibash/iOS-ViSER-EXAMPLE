@@ -35,3 +35,8 @@ struct ArticleDetailViewDependency {
     }
 
 }
+
+protocol ArticleDetailViewStreamType {
+    var input: InputWrapper<ArticleDetailViewDependency.Input> { get }
+    var output: OutputWrapper<ArticleDetailViewDependency.Output> { get }
+}

@@ -9,11 +9,6 @@ import RxCocoa
 import RxSwift
 import Unio
 
-protocol ArticleDetailViewStreamType: AnyObject {
-    var input: InputWrapper<ArticleDetailViewDependency.Input> { get }
-    var output: OutputWrapper<ArticleDetailViewDependency.Output> { get }
-}
-
 final class ArticleDetailViewStream: UnioStream<ArticleDetailViewStream>, ArticleDetailViewStreamType {
 
     convenience init(extra: Extra) {
