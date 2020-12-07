@@ -16,6 +16,7 @@ final class ArticleDetailViewController: UIViewController {
     var viewStream: ArticleDetailViewStreamType!
 
     // MARK: - Private properties
+
     @IBOutlet private weak var webView: WKWebView!
     private let disposeBag = DisposeBag()
 
