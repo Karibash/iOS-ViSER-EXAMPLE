@@ -29,7 +29,7 @@
                             <constraint firstItem="VfD-WL-Dyj" firstAttribute="trailing" secondItem="x13-L6-Rsj" secondAttribute="trailing" id="yjJ-mp-Qct"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Zenn" id="Tvu-03-hYK"/>
+                    <navigationItem key="navigationItem" title="新着の記事一覧" id="Tvu-03-hYK"/>
                     <connections>
                         <outlet property="articleTableView" destination="VfD-WL-Dyj" id="bzK-pQ-eC4"/>
                     </connections>
