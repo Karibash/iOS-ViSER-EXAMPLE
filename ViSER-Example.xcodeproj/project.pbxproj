@@ -49,6 +49,11 @@
 		E639806B257CCC2D00248B8D /* ArticleDetailViewStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = E639806A257CCC2D00248B8D /* ArticleDetailViewStream.swift */; };
 		E639806F257CCEC800248B8D /* ArticleDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E639806E257CCEC800248B8D /* ArticleDetailRouter.swift */; };
 		E6398073257D0A3800248B8D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6398072257D0A3800248B8D /* User.swift */; };
+		E6398078257DCAD800248B8D /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6398077257DCAD800248B8D /* MainRouter.swift */; };
+		E639807E257DCAE900248B8D /* MainInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = E639807D257DCAE900248B8D /* MainInterfaces.swift */; };
+		E6398082257DCBC600248B8D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6398081257DCBC600248B8D /* MainViewController.swift */; };
+		E6398088257DCD3700248B8D /* MainViewStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6398087257DCD3700248B8D /* MainViewStream.swift */; };
+		E69152A02581179400D3FC16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E691529F2581179400D3FC16 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +138,11 @@
 		E639806A257CCC2D00248B8D /* ArticleDetailViewStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewStream.swift; sourceTree = "<group>"; };
 		E639806E257CCEC800248B8D /* ArticleDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailRouter.swift; sourceTree = "<group>"; };
 		E6398072257D0A3800248B8D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E6398077257DCAD800248B8D /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		E639807D257DCAE900248B8D /* MainInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInterfaces.swift; sourceTree = "<group>"; };
+		E6398081257DCBC600248B8D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E6398087257DCD3700248B8D /* MainViewStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewStream.swift; sourceTree = "<group>"; };
+		E691529F2581179400D3FC16 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +251,7 @@
 		E6397F3425772B0A00248B8D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				E6398076257DC7DA00248B8D /* Main */,
 				E6397F3C25773F6800248B8D /* Articles */,
 				E639805B257CC93400248B8D /* ArticleDetail */,
 			);
@@ -393,6 +404,18 @@
 			path = ArticleDetail;
 			sourceTree = "<group>";
 		};
+		E6398076257DC7DA00248B8D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E691529F2581179400D3FC16 /* Main.storyboard */,
+				E639807D257DCAE900248B8D /* MainInterfaces.swift */,
+				E6398081257DCBC600248B8D /* MainViewController.swift */,
+				E6398087257DCD3700248B8D /* MainViewStream.swift */,
+				E6398077257DCAD800248B8D /* MainRouter.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -501,6 +524,7 @@
 				E63980152578B3D500248B8D /* ArticleTableViewCell.xib in Resources */,
 				E6397EE025763C9F00248B8D /* LaunchScreen.storyboard in Resources */,
 				E639805D257CCA2600248B8D /* ArticleDetail.storyboard in Resources */,
+				E69152A02581179400D3FC16 /* Main.storyboard in Resources */,
 				E6397EDD25763C9F00248B8D /* Assets.xcassets in Resources */,
 				E6397F3E257745D500248B8D /* Articles.storyboard in Resources */,
 			);
@@ -567,6 +591,7 @@
 				E639803A2579193700248B8D /* Alamofire+Ex.swift in Sources */,
 				E6397FE02577850100248B8D /* ArticlesInterfaces.swift in Sources */,
 				E6397ED825763C9E00248B8D /* ArticlesViewController.swift in Sources */,
+				E6398078257DCAD800248B8D /* MainRouter.swift in Sources */,
 				E6397FEF2577A00F00248B8D /* TableViewSection.swift in Sources */,
 				E6398073257D0A3800248B8D /* User.swift in Sources */,
 				E6398061257CCA6400248B8D /* ArticleDetailViewController.swift in Sources */,
@@ -582,8 +607,11 @@
 				E63980192578B66000248B8D /* UIView+Ex.swift in Sources */,
 				E63980262578CCE400248B8D /* ArticleRepository.swift in Sources */,
 				E639804A257A010D00248B8D /* Date+Ex.swift in Sources */,
+				E6398082257DCBC600248B8D /* MainViewController.swift in Sources */,
 				E6397F44257747A400248B8D /* ArticlesViewStream.swift in Sources */,
+				E639807E257DCAE900248B8D /* MainInterfaces.swift in Sources */,
 				E6397F4A257747C900248B8D /* ArticlesRouter.swift in Sources */,
+				E6398088257DCD3700248B8D /* MainViewStream.swift in Sources */,
 				E6397F952577627700248B8D /* UIStoryboard+Ex.swift in Sources */,
 				E6398058257A5B9600248B8D /* ArticlePrefetchLogicStream.swift in Sources */,
 				E639806B257CCC2D00248B8D /* ArticleDetailViewStream.swift in Sources */,
